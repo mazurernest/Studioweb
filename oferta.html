@@ -1,26 +1,838 @@
+ ```html
 <!DOCTYPE html>
-<html lang="pl"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Oferta — Studio Web.">
-<title>Oferta — Studio Web</title><link rel="stylesheet" href="style.css">
-</head><body>
-<header class="nav"><a href="index.html" class="logo">Studio<span>Web</span></a>
-<nav class="menu"><a href="index.html">Portfolio</a><a href="oferta.html#pakiety">Oferta</a><a href="oferta.html#kontakt" class="btn dark">Bezpłatna wycena</a></nav></header>
-<section class="page-hero"><span class="label">OFERTA</span><h1>Strona, która <span>pracuje dla firmy.</span></h1><p>Proste pakiety startowe dla małych firm. Zakres można dopasować do konkretnego projektu.</p><div class="buttons"><a class="btn dark" href="#kontakt">BEZPŁATNA WYCENA →</a><a class="btn" href="index.html">← PORTFOLIO</a></div></section>
-<section id="pakiety" class="section"><div class="heading"><small>PAKIETY</small><h2>Wybierz punkt startowy.</h2><p>Ceny poniżej są cenami startowymi. Ostateczna wycena zależy od zakresu i materiałów.</p></div><div class="price-grid">
-<article class="price"><small>01 / START</small><h3>Wizytówka</h3><div class="amount">399 zł</div><ul><li>✓ 1 strona</li><li>✓ Wersja mobilna</li><li>✓ Sekcja usług/oferty</li><li>✓ Kontakt</li><li>✓ Podstawowe SEO</li></ul><a class="btn" href="#kontakt">ZAPYTAJ</a></article>
-<article class="price featured"><small>02 / NAJCZĘŚCIEJ WYBIERANY</small><h3>Firma</h3><div class="amount">799 zł</div><ul><li>✓ Do 5 podstron</li><li>✓ Indywidualny wygląd</li><li>✓ Formularz kontaktowy</li><li>✓ Galeria realizacji</li><li>✓ Podstawowe SEO</li><li>✓ Wersja mobilna</li></ul><a class="btn dark" href="#kontakt">WYBIERAM</a></article>
-<article class="price"><small>03 / PREMIUM</small><h3>Premium</h3><div class="amount">1299 zł</div><ul><li>✓ Rozbudowana strona</li><li>✓ Indywidualny projekt</li><li>✓ Rozbudowane sekcje</li><li>✓ Formularze</li><li>✓ SEO</li><li>✓ Optymalizacja szybkości</li></ul><a class="btn" href="#kontakt">ZAPYTAJ</a></article>
-</div></section>
-<section class="section"><div class="heading"><small>DLACZEGO WARTO</small><h2>Klient nie kupuje kodu. Kupuje efekt.</h2><p>Dlatego projekt skupia się na tym, co odwiedzający ma zobaczyć i zrobić.</p></div><div class="features"><article class="feature"><strong>01</strong><h3>Czytelna oferta</h3><p>Najważniejsze informacje są widoczne bez przeklikiwania.</p></article><article class="feature"><strong>02</strong><h3>Profesjonalny wygląd</h3><p>Spójny design wzmacnia pierwsze wrażenie.</p></article><article class="feature"><strong>03</strong><h3>Mobile first</h3><p>Strona jest przygotowana również dla użytkowników telefonu.</p></article><article class="feature"><strong>04</strong><h3>Jasne CTA</h3><p>Kontakt i następny krok są łatwe do znalezienia.</p></article></div></section>
-<section class="section" id="faq"><div class="heading"><small>FAQ</small><h2>Najczęstsze pytania.</h2></div><div class="faq">
-<div class="faq-item"><button onclick="faq(this)">Ile trwa wykonanie strony?<span>+</span></button><div class="answer">Prosta strona może być gotowa w ciągu kilku dni. Termin ustalamy po określeniu zakresu.</div></div>
-<div class="faq-item"><button onclick="faq(this)">Czy strona działa na telefonie?<span>+</span></button><div class="answer">Tak. Projekt jest przygotowywany z myślą o telefonach, tabletach i komputerach.</div></div>
-<div class="faq-item"><button onclick="faq(this)">Czy można później rozbudować stronę?<span>+</span></button><div class="answer">Tak. Zakres można rozszerzyć o kolejne podstrony i funkcje.</div></div>
-<div class="faq-item"><button onclick="faq(this)">Czy pierwsza rozmowa kosztuje?<span>+</span></button><div class="answer">Nie. Pierwsza rozmowa służy poznaniu potrzeb i przygotowaniu wyceny.</div></div>
-</div></section>
-<section id="kontakt" class="contact-section"><div class="contact-intro"><small>KONTAKT</small><h2>Opowiedz o swojej <span>firmie.</span></h2><p>Napisz, czym zajmuje się Twoja firma i jakiej strony potrzebujesz. Odpowiem na e-mail.</p><a class="email-link" href="mailto:mazurernest55@gmail.com">mazurernest55@gmail.com</a></div>
-<form class="contact-form" id="contactForm"><div class="form-group"><label>IMIĘ / NAZWA FIRMY</label><input id="name" required placeholder="Np. Jan Kowalski / Firma XYZ"></div><div class="form-group"><label>E-MAIL</label><input id="email" type="email" required placeholder="twoj@email.pl"></div><div class="form-group"><label>RODZAJ STRONY</label><select id="service" required><option value="">Wybierz</option><option>Wizytówka</option><option>Strona firmowa</option><option>Sklep internetowy</option><option>Inny projekt</option></select></div><div class="form-group"><label>WIADOMOŚĆ</label><textarea id="message" rows="6" required placeholder="Czym zajmuje się firma i czego potrzebujesz?"></textarea></div><button class="btn dark" type="submit">WYŚLIJ ZAPYTANIE →</button><p class="form-note">Przycisk otworzy aplikację pocztową z gotową wiadomością.</p></form></section>
-<footer class="footer"><div class="footer-row"><div><div class="logo">Studio<span>Web</span></div><p>Nowoczesne strony dla małych firm.</p></div><a href="mailto:mazurernest55@gmail.com">mazurernest55@gmail.com</a></div><p class="copy">© 2026 Studio Web — portfolio demonstracyjne.</p></footer>
-<script>function faq(b){const i=b.parentElement,o=i.classList.contains("open");document.querySelectorAll(".faq-item").forEach(x=>x.classList.remove("open"));if(!o)i.classList.add("open")}
-document.getElementById("contactForm")?.addEventListener("submit",e=>{e.preventDefault();let n=document.getElementById("name").value.trim(),m=document.getElementById("email").value.trim(),s=document.getElementById("service").value,t=document.getElementById("message").value.trim();let sub=encodeURIComponent("Zapytanie o stronę — "+n),body=encodeURIComponent("Dzień dobry!\n\nFirma: "+n+"\nE-mail: "+m+"\nRodzaj strony: "+s+"\n\nWiadomość:\n"+t);location.href="mailto:mazurernest55@gmail.com?subject="+sub+"&body="+body})</script></body></html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Oferta StudioWeb — nowoczesne strony internetowe dla małych firm. Pakiety od 399 zł, wersja mobilna, SEO i indywidualny projekt. Bezpłatna wycena.">
+
+<meta name="robots" content="index, follow">
+
+<title>Oferta stron internetowych — StudioWeb</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="nav">
+
+    <a href="index.html" class="logo" aria-label="StudioWeb — strona główna">
+        Studio<span>Web</span>
+    </a>
+
+    <nav class="menu" aria-label="Główna nawigacja">
+        <a href="index.html">Portfolio</a>
+        <a href="oferta.html#pakiety">Oferta</a>
+        <a href="#kontakt" class="btn dark">Bezpłatna wycena</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <span class="label">OFERTA / STRONY INTERNETOWE</span>
+
+    <h1>
+        Strona, która
+        <span>pracuje dla firmy.</span>
+    </h1>
+
+    <p>
+        Tworzę nowoczesne, responsywne strony internetowe
+        dla małych firm. Wybierz punkt startowy, a zakres
+        dopasujemy do Twoich potrzeb.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#pakiety" class="btn dark">
+            ZOBACZ PAKIETY ↓
+        </a>
+
+        <a href="#kontakt" class="btn">
+            BEZPŁATNA WYCENA
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PAKIETY -->
+
+<section class="section" id="pakiety">
+
+    <div class="heading">
+
+        <small>01 / PAKIETY</small>
+
+        <h2>
+            Wybierz punkt startowy.
+            <span>Resztę dopasujemy.</span>
+        </h2>
+
+        <p>
+            Poniższe ceny są cenami startowymi. Ostateczna wycena
+            zależy od zakresu projektu, liczby podstron oraz
+            materiałów potrzebnych do wykonania strony.
+        </p>
+
+    </div>
+
+
+    <div class="price-grid">
+
+
+        <!-- START -->
+
+        <article class="price">
+
+            <small>01 / START</small>
+
+            <h3>Wizytówka</h3>
+
+            <div class="amount">
+                399 zł
+            </div>
+
+            <p>
+                Dla małej firmy lub osoby usługowej,
+                która potrzebuje prostej i profesjonalnej
+                obecności w internecie.
+            </p>
+
+            <ul>
+
+                <li>✓ 1 strona</li>
+                <li>✓ Wersja mobilna</li>
+                <li>✓ Sekcja usług / oferty</li>
+                <li>✓ Kontakt</li>
+                <li>✓ Podstawowe SEO</li>
+
+            </ul>
+
+            <a href="#kontakt" class="btn">
+                ZAPYTAJ →
+
+            </a>
+
+        </article>
+
+
+        <!-- FIRMA -->
+
+        <article class="price featured">
+
+            <small>02 / NAJCZĘŚCIEJ WYBIERANY</small>
+
+            <h3>Firma</h3>
+
+            <div class="amount">
+                799 zł
+            </div>
+
+            <p>
+                Dla firmy, która chce profesjonalnie
+                zaprezentować swoją ofertę, usługi
+                i realizacje.
+            </p>
+
+            <ul>
+
+                <li>✓ Do 5 podstron</li>
+                <li>✓ Indywidualny wygląd</li>
+                <li>✓ Formularz kontaktowy</li>
+                <li>✓ Galeria realizacji</li>
+                <li>✓ Podstawowe SEO</li>
+                <li>✓ Wersja mobilna</li>
+
+            </ul>
+
+            <a href="#kontakt" class="btn dark">
+                WYBIERAM →
+
+            </a>
+
+        </article>
+
+
+        <!-- PREMIUM -->
+
+        <article class="price">
+
+            <small>03 / PREMIUM</small>
+
+            <h3>Premium</h3>
+
+            <div class="amount">
+                1299 zł
+            </div>
+
+            <p>
+                Dla firmy, która potrzebuje rozbudowanej
+                strony z większą liczbą sekcji i funkcji.
+            </p>
+
+            <ul>
+
+                <li>✓ Rozbudowana strona</li>
+                <li>✓ Indywidualny projekt</li>
+                <li>✓ Rozbudowane sekcje</li>
+                <li>✓ Formularze</li>
+                <li>✓ SEO</li>
+                <li>✓ Optymalizacja szybkości</li>
+
+            </ul>
+
+            <a href="#kontakt" class="btn">
+                ZAPYTAJ →
+
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- DLACZEGO WARTO -->
+
+<section class="section proof">
+
+    <div class="heading">
+
+        <small>02 / DLACZEGO WARTO</small>
+
+        <h2>
+            Klient nie kupuje kodu.
+            <span>Kupuje efekt.</span>
+        </h2>
+
+        <p>
+            Dlatego projekt strony skupia się nie tylko na wyglądzie,
+            ale przede wszystkim na tym, co klient odwiedzający stronę
+            ma zobaczyć i zrobić.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <strong>01 / OFERTA</strong>
+
+            <h3>Czytelna oferta</h3>
+
+            <p>
+                Najważniejsze informacje o firmie, usługach
+                i ofercie są przedstawione w prosty sposób.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>02 / WIZERUNEK</strong>
+
+            <h3>Profesjonalny wygląd</h3>
+
+            <p>
+                Spójny i nowoczesny design pomaga zrobić
+                dobre pierwsze wrażenie.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>03 / MOBILE</strong>
+
+            <h3>Gotowa na telefon</h3>
+
+            <p>
+                Strona jest przygotowana do wygodnego
+                korzystania na telefonach, tabletach i komputerach.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>04 / KONTAKT</strong>
+
+            <h3>Jasne CTA</h3>
+
+            <p>
+                Przyciski i sekcje kontaktowe prowadzą klienta
+                do kolejnego kroku bez zbędnego szukania.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- DLA KOGO -->
+
+<section class="section">
+
+    <div class="heading">
+
+        <small>03 / DLA KOGO?</small>
+
+        <h2>
+            Jedna strona.
+            <span>Wiele możliwości.</span>
+        </h2>
+
+        <p>
+            Strona może zostać przygotowana dla różnych rodzajów
+            małych firm i lokalnych usług.
+        </p>
+
+    </div>
+
+
+    <div class="proof-grid">
+
+        <article class="proof-box light">
+
+            <strong>01 / USŁUGI</strong>
+
+            <h3>Firmy usługowe</h3>
+
+            <p>
+                Remonty, instalacje, transport, mechanika,
+                sprzątanie i inne usługi.
+            </p>
+
+        </article>
+
+
+        <article class="proof-box light">
+
+            <strong>02 / LOKALNE FIRMY</strong>
+
+            <h3>Biznes lokalny</h3>
+
+            <p>
+                Firmy, które chcą być łatwiejsze do znalezienia
+                i profesjonalnie zaprezentować swoją działalność.
+            </p>
+
+        </article>
+
+
+        <article class="proof-box light">
+
+            <strong>03 / USŁUGI OSOBISTE</strong>
+
+            <h3>Specjaliści</h3>
+
+            <p>
+                Barberzy, fryzjerzy, trenerzy, fotografowie,
+                kosmetyczki i inni specjaliści.
+            </p>
+
+        </article>
+
+
+        <article class="proof-box light">
+
+            <strong>04 / GASTRONOMIA</strong>
+
+            <h3>Restauracje</h3>
+
+            <p>
+                Menu, informacje o lokalu, galeria,
+                kontakt i rezerwacje.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- PROCES -->
+
+<section class="section">
+
+    <div class="heading">
+
+        <small>04 / WSPÓŁPRACA</small>
+
+        <h2>
+            Prosto od pomysłu
+            <span>do gotowej strony.</span>
+        </h2>
+
+        <p>
+            Nie musisz znać się na tworzeniu stron.
+            Najpierw poznaję Twoją firmę i potrzeby,
+            a następnie przygotowuję odpowiednie rozwiązanie.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <strong>01 / KONTAKT</strong>
+
+            <h3>Opowiadasz o firmie</h3>
+
+            <p>
+                Piszesz, czym zajmuje się Twoja firma
+                i czego potrzebujesz.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>02 / WYCENA</strong>
+
+            <h3>Ustalamy zakres</h3>
+
+            <p>
+                Na podstawie potrzeb przygotowuję
+                konkretną propozycję.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>03 / REALIZACJA</strong>
+
+            <h3>Tworzę stronę</h3>
+
+            <p>
+                Przygotowuję projekt, treści i układ
+                zgodnie z ustalonym zakresem.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>04 / PUBLIKACJA</strong>
+
+            <h3>Strona trafia do internetu</h3>
+
+            <p>
+                Po akceptacji gotowy projekt może zostać
+                opublikowany i udostępniony klientom.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div>
+
+        <h2>
+            Nie wiesz,
+            <br>
+            czego potrzebujesz?
+        </h2>
+
+        <p>
+            Napisz kilka zdań o swojej firmie.
+            Wspólnie ustalimy, jakie rozwiązanie będzie najlepsze.
+        </p>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <a href="#kontakt" class="btn dark">
+            BEZPŁATNA WYCENA →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="section">
+
+    <div class="heading">
+
+        <small>05 / FAQ</small>
+
+        <h2>
+            Najczęstsze
+            <span>pytania.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+
+        <div class="faq-item">
+
+            <button type="button">
+                Ile trwa wykonanie strony?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+
+                Prosta strona może być gotowa w ciągu kilku dni.
+                Dokładny termin ustalamy po poznaniu zakresu projektu
+                i materiałów potrzebnych do realizacji.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button type="button">
+                Czy strona działa na telefonie?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+
+                Tak. Strony są przygotowywane z myślą o telefonach,
+                tabletach i komputerach.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button type="button">
+                Czy mogę później rozbudować stronę?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+
+                Tak. Stronę można później rozbudować o kolejne
+                podstrony, sekcje i funkcje. Zakres dodatkowych prac
+                ustalamy indywidualnie.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button type="button">
+                Czy pierwsza rozmowa jest płatna?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+
+                Nie. Pierwszy kontakt służy poznaniu Twojej firmy,
+                potrzeb oraz przygotowaniu odpowiedniej wyceny.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button type="button">
+                Czy muszę mieć własne zdjęcia?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+
+                Nie zawsze. Możemy wykorzystać materiały, które już
+                posiadasz, albo ustalić inne rozwiązanie odpowiednie
+                dla konkretnego projektu.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button type="button">
+                Czy mogę najpierw zobaczyć przykładowe realizacje?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+
+                Tak. Przykładowe projekty znajdziesz w portfolio.
+                Pokazują różne sposoby zaprojektowania strony
+                dla konkretnej branży.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- KONTAKT -->
+
+<section class="contact-section" id="kontakt">
+
+    <div class="contact-intro">
+
+        <span class="label">
+            06 / KONTAKT
+        </span>
+
+        <h2>
+            Opowiedz
+            <span>o swojej firmie.</span>
+        </h2>
+
+        <p>
+            Napisz, czym zajmuje się Twoja firma i jakiej strony
+            potrzebujesz. Otrzymasz odpowiedź z propozycją dalszego działania.
+        </p>
+
+        <a
+            href="mailto:mazurernest55@gmail.com"
+            class="email-link"
+        >
+            mazurernest55@gmail.com
+        </a>
+
+    </div>
+
+
+    <form
+        class="contact-form"
+        action="mailto:mazurernest55@gmail.com"
+        method="post"
+        enctype="text/plain"
+    >
+
+        <div class="form-group">
+
+            <label for="name">
+                IMIĘ / NAZWA FIRMY
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="Imię / Nazwa firmy"
+                placeholder="Np. Jan Kowalski / Firma XYZ"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="email">
+                E-MAIL
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="E-mail"
+                placeholder="twoj@email.pl"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="type">
+                RODZAJ STRONY
+            </label>
+
+            <select id="type" name="Rodzaj strony" required>
+
+                <option value="">
+                    Wybierz opcję
+                </option>
+
+                <option value="Strona wizytówka">
+                    Strona wizytówka
+                </option>
+
+                <option value="Strona firmowa">
+                    Strona firmowa
+                </option>
+
+                <option value="Strona premium">
+                    Strona premium
+                </option>
+
+                <option value="Nie wiem — potrzebuję porady">
+                    Nie wiem — potrzebuję porady
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="message">
+                WIADOMOŚĆ
+            </label>
+
+            <textarea
+                id="message"
+                name="Wiadomość"
+                rows="7"
+                placeholder="Napisz krótko, czym zajmuje się Twoja firma i czego potrzebujesz."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="btn dark"
+        >
+            WYŚLIJ ZAPYTANIE →
+        </button>
+
+
+        <p class="form-note">
+            Po wysłaniu formularza otworzy się aplikacja pocztowa
+            z przygotowaną wiadomością. Pierwsza wycena jest bezpłatna.
+        </p>
+
+    </form>
+
+</section>
+
+</main>
+
+
+<!-- STOPKA -->
+
+<footer class="footer">
+
+    <div class="footer-row">
+
+        <div>
+
+            <div class="logo">
+                Studio<span>Web</span>
+            </div>
+
+            <p>
+                Nowoczesne strony dla małych firm.
+            </p>
+
+        </div>
+
+
+        <a
+            href="mailto:mazurernest55@gmail.com"
+            class="email-link"
+        >
+            mazurernest55@gmail.com
+        </a>
+
+    </div>
+
+
+    <p class="copy">
+        © 2026 StudioWeb — portfolio demonstracyjne.
+    </p>
+
+</footer>
+
+
+<!-- FAQ -->
+
+<script>
+
+document.querySelectorAll(".faq-item button").forEach(function(button){
+
+    button.addEventListener("click", function(){
+
+        const item = button.parentElement;
+        const isOpen = item.classList.contains("open");
+
+        document.querySelectorAll(".faq-item").forEach(function(otherItem){
+
+            otherItem.classList.remove("open");
+
+            const otherButton = otherItem.querySelector("button");
+
+            if(otherButton){
+                otherButton.querySelector("span").textContent = "+";
+            }
+
+        });
+
+        if(!isOpen){
+
+            item.classList.add("open");
+            button.querySelector("span").textContent = "−";
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+```
+      
